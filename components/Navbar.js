@@ -13,8 +13,8 @@ const Navbar = () => {
                 <ul className='flex items-center space-x-8 font-bold md:text-md'>
                     <Link href={'/'}><li>Home</li></Link>
                     <Link href={'/sneakers'}><li>Sneakers</li></Link>
-                    <Link href={'/'}><li>Sports</li></Link>
-                    <Link href={'/'}><li>Formal</li></Link>
+                    <Link href={'/sports'}><li>Sports</li></Link>
+                    <Link href={'/formal'}><li>Formal</li></Link>
                 </ul>
             </div>
             <div className="cart absolute right-0 top-4 mx-5">
