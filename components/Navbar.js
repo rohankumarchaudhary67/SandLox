@@ -53,7 +53,7 @@ const Navbar = () => {
                         <h1>Shipping</h1>
                     </div>
                     <div className="total text-right">
-                        <h1>₹5400</h1>
+                        <h1>₹3600</h1>
                         <h1>Free</h1>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
                 <hr className='w-[100%] border-1 border-black cursor-pointer mt-2' />
 
                 <div className="items w-[100%] flex py-4 shadow-lg">
-                    <img src="https://m.media-amazon.com/images/I/71jSf1opuJL._AC_UL480_FMwebp_QL65_.jpg" className='w-32' alt="" />
+                    <img src="https://m.media-amazon.com/images/I/61rNNecDMmL._UX695_.jpg" className='w-32 h-auto object-contain' alt="" />
                     <div className='px-4 w-[100%]'>
                         <div className='flex'>
                             <h3>Nike Air Jordan S-432SL</h3>
@@ -76,39 +76,7 @@ const Navbar = () => {
                             <h1>1</h1>
                             <AiFillPlusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
                         </div>
-                        <h4 className="text-right font-bold">₹1800</h4>
-                    </div>
-                </div>
-                <div className="items w-[100%] flex py-4 shadow-lg">
-                    <img src="https://m.media-amazon.com/images/I/71jSf1opuJL._AC_UL480_FMwebp_QL65_.jpg" className='w-32' alt="" />
-                    <div className='px-4 w-[100%]'>
-                        <div className='flex'>
-                            <h3>Nike Air Jordan S-432SL</h3>
-                            <span><MdDelete className='text-xl my-1' /></span>
-                        </div>
-                        <h4>Size: 10</h4>
-                        <div className="quantity flex items-center">
-                            <AiFillMinusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
-                            <h1>1</h1>
-                            <AiFillPlusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
-                        </div>
-                        <h4 className="text-right font-bold">₹1800</h4>
-                    </div>
-                </div>
-                <div className="items w-[100%] flex py-4 shadow-lg">
-                    <img src="https://m.media-amazon.com/images/I/71jSf1opuJL._AC_UL480_FMwebp_QL65_.jpg" className='w-32' alt="" />
-                    <div className='px-4 w-[100%]'>
-                        <div className='flex'>
-                            <h3>Nike Air Jordan S-432SL</h3>
-                            <span><MdDelete className='text-xl my-1' /></span>
-                        </div>
-                        <h4>Size: 10</h4>
-                        <div className="quantity flex items-center">
-                            <AiFillMinusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
-                            <h1>1</h1>
-                            <AiFillPlusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
-                        </div>
-                        <h4 className="text-right font-bold">₹1800</h4>
+                        <h4 className="text-right font-bold">₹3600</h4>
                     </div>
                 </div>
                 
