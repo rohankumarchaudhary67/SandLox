@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRef } from 'react';
 import { ImCart } from 'react-icons/Im';
 import { MdDelete } from 'react-icons/Md';
+import { RiAccountCircleFill } from 'react-icons/Ri';
 import { AiOutlineArrowRight, AiFillMinusSquare, AiFillPlusSquare } from 'react-icons/Ai';
 
 const Navbar = ({cart, subTotal, removeFromCart, addToCart}) => {
@@ -35,8 +36,9 @@ const Navbar = ({cart, subTotal, removeFromCart, addToCart}) => {
                     <Link href={'/formal'}><li>Formal</li></Link>
                 </ul>
             </div>
-            <div className="cart absolute right-0 top-4 mx-5">
-                <span onClick={handleCart}><ImCart className='h-6 w-6 fill-yellow-700 cursor-pointer' /></span>
+            <div className="cart absolute right-0 top-4 mx-5 flex">
+                <Link href={'/login'}><RiAccountCircleFill className='text-2xl fill-yellow-700 cursor-pointer mx-2' /></Link>
+                <span onClick={handleCart}><ImCart className='text-2xl fill-yellow-700 cursor-pointer mx-2' /></span>
             </div>
 
             <div ref={ref} className="sidebar flex flex-col items-center h-[100%] px-3 py-4 fixed top-0 right-0 bg-white transform transition-transform translate-x-full w-[20rem] shadow-2xl">
