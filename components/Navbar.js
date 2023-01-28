@@ -7,7 +7,7 @@ import { ImCart } from 'react-icons/Im';
 import { MdDelete } from 'react-icons/Md';
 import { AiOutlineArrowRight, AiFillMinusSquare, AiFillPlusSquare } from 'react-icons/Ai';
 
-const Navbar = () => {
+const Navbar = ({cart, subTotal, removeFromCart, addToCart}) => {
 
     const handleCart = () => {
         if (ref.current.classList.contains('translate-x-full')) {
@@ -53,7 +53,7 @@ const Navbar = () => {
                         <h1>Shipping</h1>
                     </div>
                     <div className="total text-right">
-                        <h1>₹3600</h1>
+                        <h1>{subTotal}</h1>
                         <h1>Free</h1>
                     </div>
                 </div>
@@ -63,22 +63,24 @@ const Navbar = () => {
 
                 <hr className='w-[100%] border-1 border-black cursor-pointer mt-2' />
 
-                <div className="items w-[100%] flex py-4 shadow-lg">
+                {Object.keys(cart).length==0 && <div className='mt-2'>Your SandLox Cart is Empty</div> }
+
+                {Object.keys(cart).map((k)=>{ return <div className="items w-[100%] flex py-4 shadow-lg" key={k}>
                     <img src="https://m.media-amazon.com/images/I/61rNNecDMmL._UX695_.jpg" className='w-32 h-auto object-contain' alt="" />
                     <div className='px-4 w-[100%]'>
                         <div className='flex'>
-                            <h3>Nike Air Jordan S-432SL</h3>
-                            <span><MdDelete className='text-xl my-1' /></span>
+                            <h3>{cart[k].name}</h3>
+                            <span><MdDelete onClick={()=>{removeFromCart(k, cart[k].qty, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className='text-xl my-1 cursor-pointer' /></span>
                         </div>
-                        <h4>Size: 10</h4>
+                        <h4>Size: {cart[k].size}</h4>
                         <div className="quantity flex items-center">
-                            <AiFillMinusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
-                            <h1>1</h1>
-                            <AiFillPlusSquare className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
+                            <AiFillMinusSquare onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
+                            <h1>{cart[k].qty}</h1>
+                            <AiFillPlusSquare onClick={()=>{addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className='h-8 w-8 fill-black-700 cursor-pointer mx-1' />
                         </div>
-                        <h4 className="text-right font-bold">₹3600</h4>
+                        <h4 className="text-right font-bold">₹{cart[k].price}</h4>
                     </div>
-                </div>
+                </div>})}
                 
 
 
