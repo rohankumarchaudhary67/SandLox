@@ -23,7 +23,7 @@ const Navbar = ({cart, subTotal, removeFromCart, addToCart}) => {
     const ref = useRef();
 
     return (
-        <div className='flex flex-col md:flex-row md:justify-start justify-center items-center py-2 shadow-lg'>
+        <div className='flex flex-col md:flex-row md:justify-start justify-center items-center py-2 shadow-lg sticky top-0 z-10 bg-white'>
             <div className="logo mx-5">
                 <Image src="/logo/sandlox_favicon.png" className='h-11' width={75} height={20} alt="" />
             </div>
@@ -58,7 +58,7 @@ const Navbar = ({cart, subTotal, removeFromCart, addToCart}) => {
                     </div>
                 </div>
 
-                <Link href={'/product/checkout'} className="w-[100%]"><button className='bg-black w-[100%] text-white p-3 my-2'>CheckOut</button></Link>
+                <Link href={'/checkout'} onClick={handleCart} className="w-[100%]"><button className='bg-black w-[100%] text-white p-3 my-2'>CheckOut</button></Link>
 
 
                 <hr className='w-[100%] border-1 border-black cursor-pointer mt-2' />
@@ -66,7 +66,7 @@ const Navbar = ({cart, subTotal, removeFromCart, addToCart}) => {
                 {Object.keys(cart).length==0 && <div className='mt-2'>Your SandLox Cart is Empty</div> }
 
                 {Object.keys(cart).map((k)=>{ return <div className="items w-[100%] flex py-4 shadow-lg" key={k}>
-                    <img src="https://m.media-amazon.com/images/I/61rNNecDMmL._UX695_.jpg" className='w-32 h-auto object-contain' alt="" />
+                    <img src="" className='w-32 h-auto object-contain' alt="" />
                     <div className='px-4 w-[100%]'>
                         <div className='flex'>
                             <h3>{cart[k].name}</h3>
